@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <text class="userinfo-nickname">微信这个小程序写来写去啊</text>
+    <image class="welcome-img" src="/img/toosimple.jpg"></image>   
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>

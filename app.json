@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/todo/todo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ab0a0a",
+    "navigationBarTitleText": "整天搞个大新闻",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [{
+      "color":"#000000",
+      "selectedColor":"#11cd6e",
+      "iconPath":"icon/home.png",
+      "selectedIconPath":"icon/home-selected.png",
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    }, {
+      "color":"#000000",
+      "selectedColor":"#11cd6e",
+      "iconPath":"icon/todo.png",
+      "selectedIconPath":"icon/todo-selected.png",
+      "pagePath": "pages/todo/todo",
+      "text": "TODO"
+    }]
+  }
+}

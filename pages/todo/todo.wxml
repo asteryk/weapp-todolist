@@ -1,0 +1,13 @@
+<!--main.wxml-->
+<view class="container">
+    <view class="todo-title">微小的工作</view>
+    <view class="todo-list">
+        <view class="todo-item"  wx:for="{{todolist}}" wx:for-index="indexTodo" wx:for-item="singleTodo">{{indexTodo}}:{{singleTodo.value}}</view>
+    </view>
+    <view class="todo-input">
+        <input class="u-todo-input" name="input" placeholder="写下中央决定的事项" bindinput="bindKeyInput"/>
+    </view>
+    <view class="btn-submit">
+        <button type="primary" size="mini" bindtap="handleTap"> 提交 </button>
+    </view>
+</view>
