@@ -1,14 +1,18 @@
 .todo-list {
-  margin: 40rpx 10rpx;
+  margin: 10rpx;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 600rpx;
 }
 .todo-title{
-  font-size: 40rpx;
+  font-size: 70rpx;
   color: #aaa;
 }
-.todo-item,.todo-input {
+.todo-item{
+  margin: 30rpx;
+  height: 120rpx;
+}
+.todo-input {
   margin: 10rpx;
 }
 .todo-input input{
@@ -17,4 +21,34 @@
 }
 .btn-submit{
   width: 500rpx;
+}
+.already-item,.undo-item{
+  display: flex;
+  flex-direction: row;
+  font-size:60rpx;
+  width: 100%;
+}
+.u-already-text{
+  margin-left: 50rpx;
+  padding-top: 10rpx;
+  width: 450rpx;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  color: #999;
+  text-decoration:line-through;
+}
+.u-undo-text{
+  margin-left: 120rpx;
+  padding-top: 10rpx;
+  width: 450rpx;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  color: #000;
+  text-decoration:none;
+}
+.right-ico{
+  position: absolute;
+  right:20rpx;
 }

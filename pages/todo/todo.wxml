@@ -1,11 +1,21 @@
 <!--main.wxml-->
 <view class="container">
     <view class="todo-title">微小的工作</view>
-    <view class="todo-list">
-        <view class="todo-item"  wx:for="{{todolist}}" wx:for-index="indexTodo" wx:for-item="singleTodo">{{indexTodo}}:{{singleTodo.value}}</view>
-    </view>
+    <scroll-view scroll-y="true" class="todo-list">
+        <view class="todo-item"  wx:for="{{todolist}}" wx:for-index="indexTodo" wx:for-item="singleTodo">
+            <view class="already-item" wx:if="{{singleTodo.status == 1}}">
+                <icon class="left-ico" type="success" size="30" color="green"/>
+                <text class="u-already-text" data-id="{{singleTodo.id}}" bindtap="alreadyDo">{{singleTodo.value}}</text>
+                <icon class="right-ico" data-delid="{{singleTodo.id}}" type="cancel" size="30" color="red" bindtap="delDo" />
+            </view>
+            <view class="undo-item" wx:else>
+                <text class="u-undo-text" data-id="{{singleTodo.id}}" bindtap="alreadyDo">{{singleTodo.value}}</text>
+                <icon class="right-ico" data-delid="{{singleTodo.id}}" type="cancel" size="30" color="red" bindtap="delDo" />
+            </view>           
+        </view>
+    </scroll-view>
     <view class="todo-input">
-        <input class="u-todo-input" name="input" placeholder="写下中央决定的事项" bindinput="bindKeyInput"/>
+        <input class="u-todo-input" name="input" placeholder="写下中央决定的事项" value="{{inputVal}}" bindinput="bindKeyInput"/>
     </view>
     <view class="btn-submit">
         <button type="primary" size="mini" bindtap="handleTap"> 提交 </button>
