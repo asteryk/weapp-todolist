@@ -12,8 +12,9 @@ Page({
   handleTap:function(){
     var that = this;
     var length = this.data.todolist.length;
-    this.data.todolist.push({
-      id:length+1,
+    var todolist = this.data.todolist;
+    todolist.push({
+      id:(new Date()).valueOf(),
       status:0,//will do
       value:this.data.inputVal
     });
@@ -30,6 +31,7 @@ Page({
         console.log(res);
       }
     });
+    console.log(this.data.todolist);
   },
   alreadyDo:function(event){
     var that = this;
@@ -52,6 +54,7 @@ Page({
         console.log(res);
       }
     });
+    console.log(this.data.todolist);
   },
   delDo:function(event){
     var that = this;
